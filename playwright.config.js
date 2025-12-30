@@ -1,7 +1,12 @@
 // @ts-check
 
 import { defineConfig, devices } from '@playwright/test';
+//import dotenv from 'dotenv';
+
 require('dotenv').config();
+if (!process.env.GITHUB_ACTIONS) {
+  require('dotenv').config();
+}
 
 
 /**
